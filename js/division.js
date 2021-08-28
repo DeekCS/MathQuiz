@@ -80,5 +80,5 @@
             submitBtn.style.visibility = "hidden";
             operator.style.visibility = "hidden";
             restartGame.style.visibility = "visible";
-            levelUpBtn.style.visibility = "visible";
+            //levelUpBtn.style.visibility = "visible";
         }
