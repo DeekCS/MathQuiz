@@ -27,6 +27,7 @@
 
         CheckGame = () => {
         let sumResult = (num1 / num2);
+        sumResult.toFixed(2);
         let userAnswer = inputBox.value;
         if (userAnswer == sumResult) {
             render();
