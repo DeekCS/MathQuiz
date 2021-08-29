@@ -17,11 +17,11 @@
         let sadSound = new Audio('sad.wav');
         let level = new Audio('level.wav');
 
-        //Showing numbers to user
+        //Show numbers to user
         v1.style.visibility = "visible";
         v2.style.visibility = "visible";
 
-        //Hiding buttons at the beginning to user
+        //Hide buttons at the beginning to user
         restartGame.style.visibility = "hidden";
         levelUpBtn.style.visibility = "hidden";
 
