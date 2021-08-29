@@ -26,7 +26,7 @@
         levelUpBtn.style.visibility = "hidden";
 
         CheckGame = () => {
-        let sumResult = num1 / num2;
+        let sumResult = (num1 / num2);
         let userAnswer = inputBox.value;
         if (userAnswer == sumResult) {
             render();
