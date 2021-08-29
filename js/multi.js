@@ -11,6 +11,8 @@
         let operator = document.getElementById('operator');
         let restartGame = document.getElementById('restart');
         let levelUpBtn = document.getElementById('levelUp');
+         let WinImage = document.getElementById('win');
+        let LoseImage = document.getElementById('lose');
 
         // init audio resources
         let congratsSound = new Audio('Congratulations-sound.mp3');
@@ -24,6 +26,9 @@
         //Hide buttons at the beginning to user
         restartGame.style.visibility = "hidden";
         levelUpBtn.style.visibility = "hidden";
+         WinImage.style.visibility = "hidden";
+        LoseImage.style.visibility = "hidden";
+        
 
         CheckGame = () => {
         let sumResult = num1 * num2;
@@ -33,16 +38,23 @@
             inputBox.value = " ";
             congratsSound.play();
             score++;
-        if (score == 5) {
+        if (score == 10) {
             let marks = 10 - wrong;
             if (marks >= 5) {
             level.play();
                 finalResult.innerHTML = `you win and got ${marks}/10`
+                  WinImage.style.visibility = "hidden";
+                
                 renderEndStyles();
             }else{
                 sadSound.play();
+                LoseImage.style.visibility = "hidden";
                 inputBox.value = " ";
-                finalResult.innerHTML = `you lose and got ${marks}/10` }
+                renderEndStyles();
+
+                finalResult.innerHTML = `you lose and got ${marks}/10`
+            
+            }
             }
         }else{ 
             wrong++;

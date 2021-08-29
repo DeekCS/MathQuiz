@@ -7,7 +7,7 @@
 
 body {
   font-family: "Josefin Sans", sans-serif;
-  background-image: url("../images/img2.jpg");
+  background-image: url("../images/back.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -22,7 +22,12 @@ section {
   align-items: center;
   /* background-color: #82ccdd; */
 }
-
+#win,
+#lose {
+  left: 50px;
+  position: relative;
+  top: 200px;
+}
 section h1 {
   text-transform: capitalize;
   padding-bottom: 30px;
@@ -42,7 +47,7 @@ section h1 {
 
 .centerdiv {
   width: 500px;
-  height: 400px;
+  height: 500px;
   background-color: #78e08f;
   display: flex;
   justify-content: center;
@@ -62,7 +67,7 @@ section h1 {
 #v2 {
   text-align: center;
   padding: 20px 30px;
-  width: 35px;
+  /* width: 35px; */
   background-color: #fff;
   border: 1px solid;
   font-size: 30px;
