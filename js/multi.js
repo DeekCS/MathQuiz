@@ -11,8 +11,10 @@
         let operator = document.getElementById('operator');
         let restartGame = document.getElementById('restart');
         let levelUpBtn = document.getElementById('levelUp');
-         let WinImage = document.getElementById('win');
+        let WinImage = document.getElementById('win');
         let LoseImage = document.getElementById('lose');
+
+
 
         // init audio resources
         let congratsSound = new Audio('Congratulations-sound.mp3');
@@ -26,9 +28,10 @@
         //Hide buttons at the beginning to user
         restartGame.style.visibility = "hidden";
         levelUpBtn.style.visibility = "hidden";
-         WinImage.style.visibility = "hidden";
+        WinImage.style.visibility = "hidden";
         LoseImage.style.visibility = "hidden";
-        
+
+
 
         CheckGame = () => {
         let sumResult = num1 * num2;
@@ -42,21 +45,20 @@
             let marks = 10 - wrong;
             if (marks >= 5) {
             level.play();
-                finalResult.innerHTML = `you win and got ${marks}/10`
-                  WinImage.style.visibility = "hidden";
-                
+            finalResult.innerHTML = `you win and got ${marks}/10`
+            WinImage.style.visibility = "visible";
+
                 renderEndStyles();
             }else{
                 sadSound.play();
-                LoseImage.style.visibility = "hidden";
                 inputBox.value = " ";
+                finalResult.innerHTML = `you lose and got ${marks}/10` 
+                LoseImage.style.visibility = "visible";
                 renderEndStyles();
-
-                finalResult.innerHTML = `you lose and got ${marks}/10`
-            
             }
-            }
-        }else{ 
+        }
+        
+    }else{ 
             wrong++;
             inputBox.value = " ";
             alert(`Correct Answer is ${sumResult} Try Again. `);
@@ -65,6 +67,7 @@
 
         //Rendering Random Numbers between 1 and 10
         render = () => {
+
             num1 = Math.floor(Math.random() * 10 + 1)
             num2 = Math.floor(Math.random() * 10 + 1)
             v1.innerHTML = num1;
@@ -80,7 +83,7 @@
         }
 
         LevelUp = () => {
-            window.location.href="./division.html";
+            window.location.href="../division.html";
         }
 
         //Customize Buttons at the end of game
